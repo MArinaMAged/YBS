@@ -3,15 +3,25 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "clean:install": "rm -rf node_modules ios/Pods ios/Podfile.lock ios/build android/build && npm i  && cd ios && pod install && cd ..",
+    "clean:build-folder": "rm -rf ios/build android/build",
+    "clean:all": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/Pods ios/build node_modules && npm cache clean --force",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "start:no-cache": "npm start -- --reset-cache",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --fix",
+    "build:apk-release": "cd android &&./gradlew assembleRelease && cd .."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
     "react": "18.1.0",
-    "react-native": "0.70.6"
+    "react-native": "0.70.6",
+    "react-native-safe-area-context": "^4.5.0",
+    "react-native-screens": "^3.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
