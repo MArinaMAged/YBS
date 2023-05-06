@@ -269,6 +269,8 @@ dependencies {
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
     }
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
 
     if (enableHermes) {
         //noinspection GradleDynamicVersion
