@@ -20,6 +20,8 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import Navigation from './src/Navigation';
+
+import SplashScreen from 'react-native-splash-screen';
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
   const backgroundStyle = {
