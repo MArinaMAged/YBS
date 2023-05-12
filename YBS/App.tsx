@@ -8,7 +8,9 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
+import SplashScreen from 'react-native-splash-screen';
+
 import {
   StatusBar,
   SafeAreaView,
@@ -23,6 +25,10 @@ const App = (): JSX.Element => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   return (
     <SafeAreaView style={styles.sectionContainer}>
