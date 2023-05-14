@@ -9,6 +9,7 @@ import {
 // import {PlansContextContainer} from '../Screens/BusinessOverview/Plans/StateManagement/Context';
 import MainScreen from '../Screens/MainScreen';
 import SecondScreen from '../Screens/SecondScreen';
+import LoginScreen from '../Screens/LoginScreen';
 // import SecondScreen from '../Screens/SecondScreen';
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -22,6 +23,7 @@ const Navigation = (): JSX.Element => {
         }}>
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Second" component={SecondScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -31,6 +33,7 @@ export default Navigation;
 export type StackParamList = {
   Main: undefined;
   Second: undefined;
+  Login: undefined;
 };
 
 export type StackScreenProps<T extends keyof StackParamList> =
