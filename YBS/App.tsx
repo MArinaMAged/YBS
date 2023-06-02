@@ -22,6 +22,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Navigation from './src/Navigation';
 
 import SplashScreen from 'react-native-splash-screen';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
   const backgroundStyle = {
@@ -33,13 +34,15 @@ const App = (): JSX.Element => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.sectionContainer}>
+    <>
       <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        barStyle={isDarkMode ? 'dark-content' : 'light-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <Navigation />
-    </SafeAreaView>
+      <SafeAreaProvider style={styles.sectionContainer}>
+        <Navigation />
+      </SafeAreaProvider>
+    </>
   );
 };
 

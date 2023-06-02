@@ -3,6 +3,7 @@ import {
   Dimensions,
   Easing,
   Image,
+  ImageBackground,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
@@ -63,7 +64,7 @@ const ImageCarousal = () => {
   const start = () => {
     Animated.timing(progress, {
       toValue: 1,
-      duration: 2500,
+      duration: 5000,
       useNativeDriver: false,
       easing: Easing.linear,
     }).start(({finished}) => {
@@ -109,7 +110,6 @@ const ImageCarousal = () => {
       duration: 2000,
       useNativeDriver: true,
     }).start(({finished}) => {
-      console.log('xxxxxxxxxx');
       if (finished) {
       }
     });
@@ -171,7 +171,7 @@ const ImageCarousal = () => {
             <LinearGradient
               colors={['rgba(0, 0, 0,0.75)', 'rgba(0, 74, 185,0.52)']}
               style={styles.image}>
-              <Image
+              <ImageBackground
                 source={item.image}
                 style={styles.image}
                 onLoadEnd={() => {
@@ -229,8 +229,8 @@ const ImageCarousal = () => {
             top: 120,
             width: '100%',
           }}>
-          <Button type={'primary'} title={'تسجيل الدخول'} />
-          <Button type={'secondary'} title={'إنشاء حساب'} />
+          <Button type={'primary'} title={'تسجيل الدخول'} onPress={() => {}} />
+          <Button type={'secondary'} title={'إنشاء حساب'} onPress={() => {}} />
         </View>
       </View>
     </View>
@@ -246,13 +246,13 @@ const styles = StyleSheet.create({
   },
   image: {
     width: width,
-    height: height * 0.59,
-    resizeMode: 'cover',
+    height: height * 0.65,
+    resizeMode: 'contain',
   },
   progressBarContainer: {
     width: width,
     position: 'absolute',
-    top: 10,
+    top: 60,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
