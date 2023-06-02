@@ -4,13 +4,10 @@ import {Button, View} from 'react-native';
 import {StackScreenProps, StackParamList} from '../../Navigation';
 
 import styles from './MainScreen.Styles';
+import ImageCarousal from '../../Components/ImageCarousal';
 
 const MainScreen = ({navigation}: StackScreenProps<'Main'>): JSX.Element => {
-  return (
-    <View style={styles.ContainerStyle}>
-      <Button title="GO TO SEC SC" onPress={() => navigation.push('Second')} />
-    </View>
-  );
+  return <ImageCarousal />;
 };
 
 export default MainScreen;
