@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/OFL.txt",
+      "sha1": "d07bf0e55e330a7f6619ae5ae617ba53524be087"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-Black.ttf",
+      "sha1": "e19026dee18b3d5dea60c72e507d9a63becd520f"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-Bold.ttf",
+      "sha1": "fa0eab4a7e7b06b887a0c01af1713def17ab3d39"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-ExtraBold.ttf",
+      "sha1": "f56d62fecf180f5b207d50e39ff4284e8fcb1683"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-ExtraLight.ttf",
+      "sha1": "276d03aa4e291f65f8b1a6b0b2b7bba32fa288a4"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-Light.ttf",
+      "sha1": "22513672b312cb92dbfee4ffb265e52657d26ede"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-Medium.ttf",
+      "sha1": "0eca987bc67f19a769b47faf2e5603a25e95368c"
+    },
+    {
+      "path": "src/assets/fonts/Tajawal-Regular.ttf",
+      "sha1": "437a3e010fdebe9473ad152ff5e7107a0b7f4a0f"
+    }
+  ]
+}
